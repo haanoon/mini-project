@@ -7,9 +7,12 @@ from transformers import (
 from datasets import load_dataset
 import torch
 from preprocess import preprocess
-
+from pprint import pprint
+import json
 # Load the preprocessed data
 dataset = preprocess()  # Should return tokenized data
+
+pprint(dataset['train'])
 
 model_name = "emilyalsentzer/Bio_ClinicalBERT"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -36,8 +39,8 @@ training_args = TrainingArguments(
 trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=dataset["train"],
-    eval_dataset=dataset["val"],  # From your val split
+    train_dataset= dataset['train'],
+    eval_dataset= dataset['val'],  # From your val split
     tokenizer=AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT"),
 )
 

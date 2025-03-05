@@ -24,7 +24,6 @@ def load_medquad(data_dir = '/home/hanoon/mini-project/medQuad/MedQuAD'):
                         for qa_pair in qa_container.findall('QAPair'):
                             question_elem = qa_pair.find('Question')
                             answer_elem = qa_pair.find('Answer')
-                            
                             if question_elem is not None and answer_elem is not None:
                                 answer_text = answer_elem.text or ''
                                 safe_context = context or ''

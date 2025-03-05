@@ -1,2 +1,7 @@
 __pycache__
 medQuad
+data/*
+train.json
+test.json
+emrQA
+__pycache__/preprocess.cpython-312.pyc

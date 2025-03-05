@@ -100,7 +100,7 @@ def flatten_squad(examples):
 def preprocess():
     # Load dataset with correct data field structure
     raw_dataset = load_dataset('json', 
-        data_files={'train':'medquad_train.json', 'val': 'medquad_val.json'},
+        data_files={'train':'train.json', 'val': 'test.json'},
         field='data'  # Load the main data array
     )
 
