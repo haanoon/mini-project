@@ -9,7 +9,7 @@ qa_pipeline = pipeline("question-answering", model=model, tokenizer=tokenizer)
 
 # Sample Question and Context
 question = "What are the symptoms of diabetes?"
-context = "Diabetes symptoms include frequent urination, excessive thirst, and increased hunger."
+context = "Diabetes is a chronic disease where the body struggles to regulate blood sugar levels due to insufficient insulin production or the body's inability to use insulin effectively, leading to high blood glucose levels (hyperglycemia) that can damage vital organs like the eyes, kidneys, nerves, and heart over time if left unmanaged; this occurs when the pancreas, which produces insulin, either doesn't create enough of the hormone or the body's cells become resistant to its effects, preventing glucose from entering cells for energy usage. "
 
 # Get the answer
 result = qa_pipeline(question=question, context=context)

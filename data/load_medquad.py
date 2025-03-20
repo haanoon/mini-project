@@ -1,6 +1,9 @@
 import os
 import xml.etree.ElementTree as ET
 
+
+from context import get_answer
+
 def load_medquad(data_dir = '/home/hanoon/mini-project/medQuad/MedQuAD'):
     qa_pairs = []
     for folder in os.listdir(data_dir):
@@ -10,7 +13,7 @@ def load_medquad(data_dir = '/home/hanoon/mini-project/medQuad/MedQuAD'):
                 if file_name.endswith('.xml'):
                     file_path = os.path.join(folder_path, file_name)
                     tree = ET.parse(file_path)
-                    root = tree.getroot()  # This is the <Document> element
+                    root = tree.getroot() 
                     
                     # Get context from <Focus> element
                     context_elem = root.find('Focus')

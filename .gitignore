@@ -6,3 +6,5 @@ test.json
 emrQA
 __pycache__/preprocess.cpython-312.pyc
 logs/
+clinicalbert-qa-final
+med
